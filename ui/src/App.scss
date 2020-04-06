@@ -1,0 +1,65 @@
+$orange: #F7AC08;
+$white: white;
+$grey: #bfbdbc;
+$black: black;
+
+
+.header {
+    background-color: $grey;
+    color: $white;
+    font-family: serif;
+    text-align: initial;
+    padding: 5px 5px 5px;
+
+    h2 {
+        text-align: left;
+        font-style: italic;
+    }
+}
+
+    .col {
+        padding-top: 15px;
+    }
+
+    .nav-pills {
+        padding-top: 30px;
+    }
+
+    .nav-link {
+        background-color: $orange;
+        color: $white;
+        align-content: center;
+
+        :active {
+            background-color: $grey;  
+        }
+    }
+
+.search_cat {
+    background-color: $white;
+    padding: 40px 270px 120px;
+    text-align: center;
+    
+    
+    h2 {
+        font-family: serif;
+        font-weight: bolder;
+        color: $orange;
+        padding-bottom: 60px;
+    }
+
+    a {
+        color: $black;
+        font-weight: bolder;
+        font-family: serif;
+        text-decoration: underline;
+        padding-left: 20px;
+      }
+}
+
+footer {
+    background-color: $grey;
+    color: $white;
+    font-size: 12px;
+    padding: 12px;
+}
