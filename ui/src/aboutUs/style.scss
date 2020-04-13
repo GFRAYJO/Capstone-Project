@@ -1,0 +1,29 @@
+$orange: #F7AC08;
+$white: white;
+$grey: #bfbdbc;
+$black: black;
+
+.mission {
+    text-align: center;
+    font-family: serif;
+    font-size: 16px;
+    
+    h3 {
+        font-weight: bold;
+        color: $orange;
+    }
+}
+
+.about_us {
+    font-family: serif;
+    font-size: 16px;
+
+    .serviceslist {
+        text-align: start;
+
+        li {
+            font-weight: bold;
+        }
+    }
+}
+

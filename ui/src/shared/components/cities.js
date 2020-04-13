@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import API from '../utils/api';
 
 class Cities extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Cities extends Component {
                 lastname: " ",
                 specialty: " ",
                 desc: " ",
-                address: " ",
+                address: " ", 
                 city: " ",
                 state: " ",
                 zip: " ",
@@ -21,14 +22,18 @@ class Cities extends Component {
         };
     }
 
+    handleChange(event) {
+        this.setState({location: event.target.city});
+      }
+
     componentDidMount() {
-        this.getListByCity();
+        this.getCity();
     };
 
    //This API call fetches the user's name
-    getListByCity = () => {
+    getCity = () => {
         if (this.state.city) {
-            API.getListByCity(this.state.demoId)
+            API.getCity(this.state.demoId)
                 .then(res => {
                     this.setState({
                         city: {
@@ -58,13 +63,14 @@ class Cities extends Component {
         else {
             console.log("No Data found")
         }
-    };
+    }; 
 
     render() {
     return (
-        <div className="row">
-            <label className="col">City</label>
-            <select className="cities">
+        <form onSubmit={this.handleSubmit}>
+            <label className="col citylabel">City</label>
+            <select className="city" value={this.state.value} onChange={this.handleChange}>
+                <option value="Select">Select...</option>
                 <option value="Casa Grande">Casa Grande</option>
                 <option value="Chandler">Chandler</option>
                 <option value="Flagstaff">Flagstaff</option>
@@ -78,9 +84,9 @@ class Cities extends Component {
                 <option value="Tucson">Tucson</option>
                 <option value="Yuma">Yuma</option>
             </select>
-        </div>
-  );
-}
+        </form>
+        );
+    }
 }
 
 export default Cities;

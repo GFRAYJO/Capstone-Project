@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router} from 'react-router-dom';
-import Header from './components/header';
-import Footer from './components/footer';
-import Home from './pages/home';
-import MedProvider from './pages/search_pages/medical_providers';
-import CHC from './pages/search_pages/chcs';
-import BHProvider from './pages/search_pages/bh_providers';
-import Hospital from './pages/search_pages/hospitals';
-import AboutUs from './pages/about';
-import ContactUs from './pages/contact';
+import Header from './shared/components/header';
+import Footer from './shared/components/footer';
+import Home from './home/home';
+import MedProvider from './pages/medical/medical_providers';
+import CHC from './pages/chc/chcs';
+import BHProvider from './pages/behavioral/bh_providers';
+import Hospital from './pages/hospital/hospitals';
+import AboutUs from './aboutUs/about';
+import ContactUs from './contactUs/contact';
 import './App.scss';
 
 
