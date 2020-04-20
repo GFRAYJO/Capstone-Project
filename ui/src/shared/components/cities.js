@@ -30,7 +30,7 @@ class Cities extends Component {
         this.getCity();
     };
 
-   //This API call fetches the user's name
+   //This API call fetches the list of cities
     getCity = () => {
         if (this.state.city) {
             API.getCity(this.state.demoId)

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import API from '../utils/api';
 
 class Results extends Component {
     constructor(props) {
@@ -6,9 +7,8 @@ class Results extends Component {
         var rows = [];
             for (var i = 0; i < rows; i++) {
                 this.state = {
-                    city: this.props.demoId,
-                    location: {
-                        demoId: " ",
+                    results: {
+                        Id: " ",
                         firstname: " ",
                         lastname: " ",
                         specialty: " ",
@@ -24,6 +24,49 @@ class Results extends Component {
             rows.push(<Results key={i} />);
         }
     }
+
+    handleChange(event) {
+        this.setState({location: event.target.results});
+      }
+
+    componentDidMount() {
+        this.getResults();
+    };
+
+   //This API call fetches a list of results
+    getResults = () => {
+        if (this.state.results) {
+            API.getResults(this.state.results)
+                .then(res => {
+                    this.setState({
+                        results: {
+                            Id: res.data[0].Id,
+                            firstname: res.data[0].firstname,
+                            lastname: res.data[0].lastname,
+                            specialty: res.data[0].specialty,
+                            desc: res.data[0].desc,
+                            address: res.data[0].address,
+                            city: res.data[0].city,
+                            state: res.data[0].state,
+                            zip: res.data[0].zip,
+                            phone: res.data[0].phone,
+                            url: res.data[0].url,
+                        }
+                    })
+                    console.log(this.state)
+                }
+                )
+                .catch(() =>
+                    this.setState({
+                        results: {},
+                        message: "Results found"
+                    })
+                );
+            }
+        else {
+            console.log("No Match found")
+        }
+    }; 
 
     render() {
     return (
@@ -45,16 +88,16 @@ class Results extends Component {
         </thead>
         <tbody>
             <tr className="resultsgrid" For="let i = index; i++">
-                <th>{this.props.lastName}</th>
-                <th>{this.props.firstName}</th>
-                <th>{this.props.specialty}</th>
-                <th>{this.props.desc}</th>
-                <th>{this.props.address}</th>
-                <th>{this.props.city}</th>
-                <th>{this.props.state}</th>
-                <th>{this.props.zip}</th>
-                <th>{this.props.phone}</th>
-                <th>{this.props.url}</th>
+                <th>{this.state.lastName}</th>
+                <th>{this.state.firstName}</th>
+                <th>{this.state.specialty}</th>
+                <th>{this.state.desc}</th>
+                <th>{this.state.address}</th>
+                <th>{this.state.city}</th>
+                <th>{this.state.state}</th>
+                <th>{this.state.zip}</th>
+                <th>{this.state.phone}</th>
+                <th>{this.state.url}</th>
             </tr>
         </tbody>
       </table>

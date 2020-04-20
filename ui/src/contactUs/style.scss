@@ -2,3 +2,15 @@ $orange: #F7AC08;
 $white: white;
 $grey: #bfbdbc;
 $black: black;
+
+form {
+    padding-top: 3rem;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 3rem;
+
+    button {
+        background-color: $orange;
+        border-color: $orange;
+    }
+}

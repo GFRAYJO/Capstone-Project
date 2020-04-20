@@ -51,7 +51,7 @@ class AboutUs extends Component {
         </p>
         </div>
         <div className="col">
-          <img src="hrc_serv.png" role="img" alt="healthcare providers" height="300" width="500px"/>
+          <img src="hrc_serv.png" role="img" alt="healthcare providers" height="375" width="500px"/>
         </div>
     </div>
     </div>

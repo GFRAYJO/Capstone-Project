@@ -19,7 +19,11 @@ Users have the ability to search by city, zip code, or specialty to ensure the a
 - [Database](#Database)
 
 ## Userinterface (UI):
-The front-end architecture is a React app that relies on Redux to manage state. The syntax used for the development of this application consists of HTML and JavaScript (JSX). It will include the use of libraries such as Redux to assist with maintaining modularity,code reusability, and reliability.
+The front-end architecture of this application is built using the React framework that relies on Redux and Axios to manage the state of the app. The syntax used for the development of this application consists of HTML, Bootstrap, JavaScript (JSX) and SASS. It includes the use of libraries to assist with modularity, reusability, and reliability.
+
+This React app includes the use of reusable code known as components.  Components are in turn imported into either the root module `App.js` or into any other module. `App.js` is the first module to communicate with index.html and the parent that loads all components and libraries.
+
+The use of Axios in this application is used to make `XMLHttpRequests` from the browser. It supports the use of the Promise API and the intercept of requests and responses to provide automatic transformation of request and response data into JSON data.
 
 ## Application Programming Interface (API):
 
