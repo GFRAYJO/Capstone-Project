@@ -26,6 +26,7 @@ This React app includes the use of reusable code known as components.  Component
 The use of Axios in this application is used to make `XMLHttpRequests` from the browser. It supports the use of the Promise API and the intercept of requests and responses to provide automatic transformation of request and response data into JSON data.
 
 ## Application Programming Interface (API):
-
+The backend or service layer to this application will consist of using the `Django RESTFramework`. It supports a RESTful API that takes requests and responses.
 
 ## Database (DB):
+This application fetches and stores data using a relational database. This application relies on the use of `PostgreSQL` that supports one to one and one to many relationships.
