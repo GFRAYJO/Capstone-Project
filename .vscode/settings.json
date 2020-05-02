@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "c:\\Users\\gfray\\OneDrive\\Documents\\MVU\\SWDV-691\\Capstone-Project\\venv\\Scripts\\python.exe"
+    "python.pythonPath": "c:\\Users\\gfray\\OneDrive\\Documents\\MVU\\SWDV-691\\Capstone-Project\\venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
 }
