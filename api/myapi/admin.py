@@ -1,5 +1,8 @@
 from django.contrib import admin
-from myapi.models import Demographics,MedProviders,CHCProviders,BHProviders
+from .Models import Demographics
+from .Models import MedProviders
+from .Models import CHCProviders
+from .Models import BHProviders
 
 # Registering of models
 admin.site.register(Demographics)
