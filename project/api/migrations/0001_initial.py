@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('lastname', models.CharField(max_length=150)),
                 ('specialty', models.CharField(max_length=250)),
                 ('description', models.CharField(max_length=5000)),
-                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapi.Demographics')),
+                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.Demographics')),
             ],
             options={
                 'db_table': 'medprovider',
@@ -48,7 +48,7 @@ class Migration(migrations.Migration):
                 ('facilityname', models.CharField(max_length=250)),
                 ('specialty', models.CharField(max_length=500)),
                 ('description', models.CharField(max_length=5000)),
-                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapi.Demographics')),
+                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.Demographics')),
             ],
             options={
                 'db_table': 'chcprovider',
@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
                 ('lastname', models.CharField(max_length=150)),
                 ('specialty', models.CharField(max_length=500)),
                 ('description', models.CharField(max_length=5000)),
-                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myapi.Demographics')),
+                ('id_demo', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='api.Demographics')),
             ],
             options={
                 'db_table': 'bhprovider',

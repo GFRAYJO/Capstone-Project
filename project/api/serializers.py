@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Demographics, MedProvider, CHCProvider, BHProvider
+from .models import Demographics, MedProvider, CHCProvider, BHProvider, FormSubmissions
 
 class DemographicsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -20,3 +20,8 @@ class BHProviderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BHProvider
         fields = ('facilityname', 'firstname', 'lastname', 'specialty', 'description', 'demo_id')
+
+class FormSubmissionsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = FormSubmissions
+        fields = ('id','firstname', 'lastname', 'email', 'phone', 'category', 'details', 'created_at')

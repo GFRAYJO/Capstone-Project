@@ -113,9 +113,43 @@ class BHProvider(models.Model):
     def _str_(self):
         return self.description
 
-   # def _int_(self):
-    #    return self.demo
+    def _int_(self):
+        return self.demo
 
-    def _str_(Demographics):
-        return Demographics.address
+# Form Submissions table Model
+class FormSubmissions(models.Model):
+    id = models.IntegerField(primary_key=True)
+    firstname = models.CharField(max_length=150)
+    lastname = models.CharField(max_length=150)
+    email = models.EmailField(max_length=200, unique=True)
+    phone = models.BigIntegerField(blank=True)
+    category = models.CharField(max_length=150)
+    details = models.CharField(max_length=5000, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        db_table = 'formsubmissions'
+
+    def _int_(self):
+        return self.id
+
+    def _str_(self):
+        return self.firstname
+
+    def _str_(self):
+        return self.lastname
+    
+    def _str_(self):
+        return self.email
+
+    def _int_(self):
+        return self.phone
+        
+    def _int_(self):
+        return self.category
+
+    def _str_(self):
+        return self.details
+
+    def _str_(self):
+        return self.created_at
