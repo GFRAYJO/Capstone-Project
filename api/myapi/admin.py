@@ -1,11 +1,8 @@
 from django.contrib import admin
-from .Models import Demographics
-from .Models import MedProviders
-from .Models import CHCProviders
-from .Models import BHProviders
+from .models import Demographics, MedProvider, CHCProvider, BHProvider
 
 # Registering of models
 admin.site.register(Demographics)
-admin.site.register(MedProviders)
-admin.site.register(CHCProviders)
-admin.site.register(BHProviders)
+admin.site.register(MedProvider)
+admin.site.register(CHCProvider)
+admin.site.register(BHProvider)
