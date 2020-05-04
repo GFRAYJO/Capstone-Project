@@ -5,10 +5,10 @@ class Results extends Component {
     constructor(props) {
         super(props);
         var rows = [];
-            for (var i = 0; i < rows; i++) {
+            for (let i = 0; i < rows; i++) {
                 this.state = {
                     results: {
-                        Id: " ",
+                        facilityname: " ",
                         firstname: " ",
                         lastname: " ",
                         specialty: " ",
@@ -30,17 +30,17 @@ class Results extends Component {
       }
 
     componentDidMount() {
-        this.getResults();
+        this.getMDResults();
     };
 
    //This API call fetches a list of results
-    getResults = () => {
+    getMDResults = () => {
         if (this.state.results) {
-            API.getResults(this.state.results)
+            API.getMDResults(this.state.results)
                 .then(res => {
                     this.setState({
                         results: {
-                            Id: res.data[0].Id,
+                            facilityname: res.data[0].facilityname,
                             firstname: res.data[0].firstname,
                             lastname: res.data[0].lastname,
                             specialty: res.data[0].specialty,
@@ -74,6 +74,7 @@ class Results extends Component {
       <table className="table table-hover resultstable">
         <thead>
             <tr className="col-list-group list-group-horizontal-lg resultsheader">
+                <th scope="col" id="facilityname">Facility Name</th>
                 <th scope="col" id="lastname">Last Name</th>
                 <th scope="col" id="firstname">First Name</th>
                 <th scope="col" id="spec">Specialty</th>
@@ -87,9 +88,10 @@ class Results extends Component {
             </tr>
         </thead>
         <tbody>
-            <tr className="resultsgrid" For="let i = index; i++">
-                <th>{this.state.lastName}</th>
-                <th>{this.state.firstName}</th>
+            <tr className="resultsgrid" For="let i = 0; i < rows; i++">
+                <th>{this.state.facilityname}</th>
+                <th>{this.state.lastname}</th>
+                <th>{this.state.firstame}</th>
                 <th>{this.state.specialty}</th>
                 <th>{this.state.desc}</th>
                 <th>{this.state.address}</th>

@@ -4,24 +4,49 @@ from .models import Demographics, MedProvider, CHCProvider, BHProvider, FormSubm
 class DemographicsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Demographics
-        fields = ('id','address', 'city', 'state', 'zip', 'phone', 'url')
+        fields = ('id',
+                  'address',
+                  'city', 
+                  'state', 
+                  'zip', 
+                  'phone', 
+                  'url')
 
 class MedProviderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = MedProvider
-        fields = ('firstname', 'lastname', 'specialty', 'description', 'demo_id')
+        fields = ('firstname', 
+                  'lastname', 
+                  'specialty', 
+                  'description', 
+                  'demo_id')
 
 class CHCProviderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = CHCProvider
-        fields = ('facilityname', 'specialty', 'description', 'demo_id')
+        fields = ('facilityname', 
+                  'specialty', 
+                  'description', 
+                  'demo_id')
 
 class BHProviderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = BHProvider
-        fields = ('facilityname', 'firstname', 'lastname', 'specialty', 'description', 'demo_id')
+        fields = ('facilityname', 
+                  'firstname', 
+                  'lastname', 
+                  'specialty', 
+                  'description', 
+                  'demo_id')
 
 class FormSubmissionsSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FormSubmissions
-        fields = ('id','firstname', 'lastname', 'email', 'phone', 'category', 'details', 'created_at')
+        fields = ('id',
+                  'firstname', 
+                  'lastname', 
+                  'email', 
+                  'phone', 
+                  'category', 
+                  'details', 
+                  'created_at')

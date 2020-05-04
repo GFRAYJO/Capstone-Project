@@ -1,27 +1,37 @@
 import axios from 'axios';
+const API_URL = 'http://localhost:8000';
 
+export default class API {
 
-export default {
-          
-    //This will fetch the user's name 
-       getCity: function() {
-           return axios.get("localhost:5001/City");
-       },
-
-       getZip: function() {
-        return axios.get("localhost:5001/Zip");
-        },
-
-        getSpecialty: function() {
-            return axios.get("localhost:5001/Specialty");
-        },
-
-        getResults: function() {
-            return axios.get("localhost:5001/id")
-        },
-
-        postForm: function() {
-            return axios.post("localhost:5001/FormId")
+    constructor(){}
+     
+//This will fetch the list of Medical Providers
+    getDemographics() {
+        const url = `${API_URL}/api/demographics/`;
+        return axios.get(url).then(response => response.data);
         }
 
-    };
+//This will fetch the list of Medical Providers
+    getMDResults() {
+        const url = `${API_URL}/api/medprovider/`;
+        return axios.get(url).then(response => response.data);
+    }
+
+//This will fetch the list of CHC Facilities
+    getCHCResults() {
+        const url = `${API_URL}/api/chcprovider/`;
+        return axios.get(url).then(response => response.data);
+    }
+
+//This will fetch the list of BH Providers
+    getBHResults() {
+        const url = `${API_URL}/api/bhprovider/`;
+        return axios.get(url).then(response => response.data);
+    }
+
+//This will submit the data entered in the Form
+    postForm() {
+        const url = `${API_URL}/api/formsubmissions/`;
+        return axios.post(url).then(response => response.data);
+    }
+}

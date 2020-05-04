@@ -22,9 +22,6 @@ class BHProvider extends Component {
                 <li className="nav-item">
                     <a className="nav-link btn btn-light rounded-pill mr-2" href="/chcs">Search Community Health Centers</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link btn btn-light rounded-pill mr-2" href="/hospitals">Search Hospitals</a>
-                </li>
         </ul>
     </div>
     <div className="row chc_img">

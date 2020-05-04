@@ -24,12 +24,6 @@ class Home extends Component {
                 Behavioral/Mental Health Providers
             </p>
         </a>
-        <a className="mr-2" href="/hospitals">
-            <img src="Hospital1.png" role="img" alt="hospital search" height="100px" width="100px"/>
-            <p>
-                Hospitals
-            </p>
-        </a>
     </div>
   );
 }
