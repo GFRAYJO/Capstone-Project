@@ -30,7 +30,7 @@ tldextract = "==2.2.1"
 urllib3 = "==1.25.6"
 virtualenv = "==16.7.5"
 virtualenv-clone = "==0.5.3"
-Django = "==3.0.7"
+Django = "==3.0.12"
 pyOpenSSL = "==19.0.0"
 
 [requires]
